@@ -3,7 +3,7 @@
 #export PATH="$HOME/.local/cuda-11.1/bin:$PATH"
 #export LD_LIBRARY_PATH="$HOME/.local/cuda-11.1/lib64:$LD_LIBRARY_PATH"
 
-export CUDA_HOME="/usr/local/cuda-11.7"
+export CUDA_HOME="/usr/local/cuda-12.2"
 export PATH="$CUDA_HOME/bin:$PATH"
 export LD_LIBRARY_PATH="$CUDA_HOME/extras/CUPTI/lib64:$CUDA_HOME/lib64:$LD_LIBRARY_PATH"
 

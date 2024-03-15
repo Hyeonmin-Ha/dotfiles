@@ -71,7 +71,7 @@ fi
 #-------------------------------------------------------------------
 # Language-specific
 #-------------------------------------------------------------------
-source "$HOME/.dotmodules/zshrc/python-env.sh"
+#source "$HOME/.dotmodules/zshrc/python-env.sh"
 
 #-------------------------------------------------------------------
 # Command-line tools
@@ -154,3 +154,22 @@ export MANWIDTH=999
 #-------------------------------------------------------------------
 source "$HOME/.dotmodules/zshrc/machine-specific.sh"
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/local_data/nvme_raid1/ha/.local/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/local_data/nvme_raid1/ha/.local/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/local_data/nvme_raid1/ha/.local/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/local_data/nvme_raid1/ha/.local/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export HF_HOME="/local_data/nvme_raid1/ha/hf_cache/huggingface"
+export CARGO_HOME="/local_data/nvme_raid1/ha/.cargo"
+export RUSTUP_HOME="/local_data/nvme_raid1/ha/.rustup"
