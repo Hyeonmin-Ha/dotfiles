@@ -170,6 +170,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export HF_HOME="/local_data/nvme_raid1/ha/hf_cache/huggingface"
+export HF_HOME="/data/huggingface"
+export HF_TOKEN_PATH="$HOME/.cache/huggingface/token"
 export CARGO_HOME="/local_data/nvme_raid1/ha/.cargo"
 export RUSTUP_HOME="/local_data/nvme_raid1/ha/.rustup"
+
+export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH

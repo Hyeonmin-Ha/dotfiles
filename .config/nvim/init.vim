@@ -436,9 +436,9 @@ endfunction
 nnoremap <silent> <Leader>n :call NERDTreeToggleNoFocus()<CR>
 
 " Open NERDTree on startup
-if argc() > 0 && &diff == 0 && &columns > 125
-  autocmd VimEnter * silent call NERDTreeToggleNoFocus()
-endif
+" if argc() > 0 && &diff == 0 && &columns > 125
+"   autocmd VimEnter * silent call NERDTreeToggleNoFocus()
+" endif
 
 " Quit NERDTree when its the only window open
 function! NERDTreeAutoQuit()
