@@ -186,7 +186,7 @@ autocmd FocusGained,BufEnter * :checktime
 autocmd VimResized * execute "normal! \<c-w>="
 
 " Highlight yanked text
-autocmd TextYankPost * lua require'vim.highlight'.on_yank({"Substitute", 300})
+"autocmd TextYankPost * lua require'vim.highlight'.on_yank({"Substitute", 300})
 
 
 " =============================================================================

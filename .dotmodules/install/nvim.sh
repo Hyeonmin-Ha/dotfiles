@@ -12,14 +12,16 @@ installing() {
 
 installing "neovim"
 cd /tmp
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz
+NVIM_NAME="nvim-linux-x86_64"
+curl -LO https://github.com/neovim/neovim-releases/releases/download/v0.11.3/$NVIM_NAME.tar.gz
+#curl -LO https://github.com/neovim/neovim/releases/download/nightly/$NVIM_NAME.tar.gz
+tar xzvf $NVIM_NAME.tar.gz
 mkdir -p ~/.local
-rsync -a nvim-linux64/* ~/.local/
+rsync -a $NVIM_NAME/* ~/.local/
 
 installing "vim-plug"
 sh -c 'curl -fLo "$HOME/.local/share/nvim/site/autoload/plug.vim" --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 installing "vim plugins"
-nvim -E -s -u ~/.config/nvim/init.vim +PlugInstall +qall!
+~/.local/bin/nvim -E -s -u ~/.config/nvim/init.vim +PlugInstall +qall!
