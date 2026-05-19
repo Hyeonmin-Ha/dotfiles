@@ -83,6 +83,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.dotmodules/bin:$PATH"
 
 # fzf
+# This line prevents my fzf is overriden by any global fzf.
+export PATH="$HOME/.fzf/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # autojump
