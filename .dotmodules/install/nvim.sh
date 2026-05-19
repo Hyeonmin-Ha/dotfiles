@@ -13,7 +13,7 @@ installing() {
 installing "neovim"
 cd /tmp
 NVIM_NAME="nvim-linux-x86_64"
-curl -LO https://github.com/neovim/neovim-releases/releases/download/v0.11.3/$NVIM_NAME.tar.gz
+curl -LO https://github.com/neovim/neovim-releases/releases/download/stable/$NVIM_NAME.tar.gz
 #curl -LO https://github.com/neovim/neovim/releases/download/nightly/$NVIM_NAME.tar.gz
 tar xzvf $NVIM_NAME.tar.gz
 mkdir -p ~/.local
